@@ -1,0 +1,22 @@
+main{
+  height: 100vh;
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+
+    font-family: 'Inter', sans-serif;
+    /* border: 1px solid gold; */
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+  main{
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+}

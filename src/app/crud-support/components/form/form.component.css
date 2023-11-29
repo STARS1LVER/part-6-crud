@@ -1,0 +1,152 @@
+
+/* styles for ngclass */
+.invalid{
+  @apply text-red-500 border-red-500 placeholder-red-500
+
+}
+
+
+.form-system {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.title-system {
+  font-size: 28px;
+  color: royalblue;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.title-system::before,.title-system::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: royalblue;
+}
+
+.title-system::before {
+  width: 18px;
+  height: 18px;
+  background-color: royalblue;
+}
+
+.title-system::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message-system, .signin-system {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.signin-system {
+  text-align: center;
+}
+
+.signin-system a {
+  color: royalblue;
+}
+
+.signin-system a:hover {
+  text-decoration: underline royalblue;
+}
+
+.flex-system {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.form-system label {
+  position: relative;
+}
+
+.form-system label .input-system {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form-system label .input-system + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form-system label .input-system:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form-system label .input:focus + span,.form-system label .input-system:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form-system label .input-system:valid + span {
+  color: green;
+}
+
+.submit-system {
+  border: none;
+  outline: none;
+  background-color: royalblue;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+}
+
+.delete-system{
+  border: none;
+  outline: none;
+  background-color: rgb(216, 43, 31);
+  padding: 10px;
+  width: 310px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+}
+
+.submit-system:hover {
+  background-color: rgb(56, 90, 194);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+

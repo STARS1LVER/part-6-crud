@@ -1,0 +1,45 @@
+<form class="form-system" [formGroup]="helpForm"  (ngSubmit)="onSubmit()" *ngIf="helpForm">
+  <p class="title-system"> {{title}} </p>
+  <p class="message-system"> {{ paragraph | titlecase }} </p>
+
+  <div class="flex-system">
+    <label>
+      <input formControlName="name" required="" placeholder="" [ngClass]="{'invalid': hasError('name')}" type="text" class="input-system"  />
+      <span>Firstname</span>
+      <app-error-message [control]="helpForm.get('name')!" ></app-error-message>
+    </label>
+  </div>
+
+  <label>
+    <input formControlName="email" required="" placeholder="" [ngClass]="{'invalid': hasError('email')}" type="email" class="input-system"  />
+    <span>Email</span>
+  </label>
+  <app-error-message [control]="helpForm.get('email')!" ></app-error-message>
+
+  <label>
+    <input formControlName="cellphone" required="" placeholder="" [ngClass]="{'invalid': hasError('cellphone')}" type="text" class="input-system"  />
+    <span>Cellphone</span>
+  </label>
+  <app-error-message [control]="helpForm.get('cellphone')!" ></app-error-message>
+
+  <label>
+    <input formControlName="help" required="" placeholder="" [ngClass]="{'invalid': hasError('help')}" class="input-system" type="text"  />
+    <span>Help</span>
+  </label>
+  <app-error-message [control]="helpForm.get('help')!" ></app-error-message>
+
+
+  <label>
+    <input formControlName="summary" required="" placeholder=""  [ngClass]="{'invalid': hasError('summary')}" type="text" class="input-system" />
+    <span>Summary</span>
+  </label>
+  <app-error-message [control]="helpForm.get('summary')!" ></app-error-message>
+
+
+  <button class="submit-system">Submit</button>
+
+  <div *ngIf="action === 'edit' ">
+    <button (click)="deleteDataForTable()" class="delete-system"> Delete <i class="fa-solid fa-trash" style="color: #ffffff;"></i> </button>
+  </div>
+
+</form>
